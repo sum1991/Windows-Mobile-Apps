@@ -1,0 +1,101 @@
+﻿<phone:PhoneApplicationPage
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity" xmlns:eim="clr-namespace:Microsoft.Expression.Interactivity.Media;assembly=Microsoft.Expression.Interactions" 
+    x:Class="FunWithDrums.playarea"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Landscape" Orientation="Landscape"
+    mc:Ignorable="d" d:DesignHeight="480" d:DesignWidth="800"
+    shell:SystemTray.IsVisible="False">
+
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!--TitlePanel contains the name of the application and page title-->
+        <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="12,17,0,28"/>
+
+        <!--ContentPanel - place additional content here-->
+        <Grid x:Name="ContentPanel" Margin="12,0" Grid.RowSpan="2">
+            <Image Height="468" HorizontalAlignment="Left" Margin="6,6,0,0" x:Name="image1" Stretch="Fill" VerticalAlignment="Top" Width="764" Source="/FunWithDrums;component/Images/gretsch%20drum%20set.png" />
+            <Button x:Name="b1" Content="Button" Margin="225,86,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Opacity="0">
+            	<i:Interaction.Triggers>
+            		<i:EventTrigger EventName="Click">
+            			<eim:PlaySoundAction Volume="1" Source="/tom1.aif"/>
+            		</i:EventTrigger>
+            	</i:Interaction.Triggers>
+            </Button>
+            <Button x:Name="b2" Content="Button" HorizontalAlignment="Right" Margin="0,86,242,0" VerticalAlignment="Top" Height="82" Width="137" Opacity="0">
+            	<i:Interaction.Triggers>
+            		<i:EventTrigger EventName="Click">
+            			<eim:PlaySoundAction Volume="1" Source="/tom2.aif"/>
+            		</i:EventTrigger>
+            	</i:Interaction.Triggers>
+            </Button>
+            <Button x:Name="b3" Content="Button" HorizontalAlignment="Right" Margin="0,215,107,186" RenderTransformOrigin="0.294,0.275" Width="186" Opacity="0">
+            	<i:Interaction.Triggers>
+            		<i:EventTrigger EventName="Click">
+            			<eim:PlaySoundAction Volume="1" Source="/tom3.aif"/>
+            		</i:EventTrigger>
+            	</i:Interaction.Triggers>
+            </Button>
+            <Button x:Name="b4" Content="Button" HorizontalAlignment="Left" Margin="188,199,0,0" RenderTransformOrigin="0.294,0.275" Width="154" Opacity="0" Height="32" VerticalAlignment="Top">
+            	<i:Interaction.Triggers>
+            		<i:EventTrigger EventName="Click">
+            			<eim:PlaySoundAction Volume="1" Source="/snare2.aif"/>
+            		</i:EventTrigger>
+            	</i:Interaction.Triggers>
+            </Button>
+            <Button x:Name="b5" Content="Button" HorizontalAlignment="Left" Margin="23,137,0,0" RenderTransformOrigin="0.294,0.275" Width="161" Opacity="0" Height="46" VerticalAlignment="Top">
+            	<i:Interaction.Triggers>
+            		<i:EventTrigger EventName="Click">
+            			<eim:PlaySoundAction Volume="1" Source="/cymbal6.aif"/>
+            		</i:EventTrigger>
+            	</i:Interaction.Triggers>
+            </Button>
+            <Button x:Name="b6" Content="Button" HorizontalAlignment="Left" Margin="51,8,0,0" RenderTransformOrigin="0.294,0.275" Width="192" Opacity="0" Height="97" VerticalAlignment="Top">
+            	<i:Interaction.Triggers>
+            		<i:EventTrigger EventName="Click">
+            			<eim:PlaySoundAction Volume="1" Source="/cymbal8.aif"/>
+            		</i:EventTrigger>
+            	</i:Interaction.Triggers>
+            </Button>
+            <Button x:Name="b7" Content="Button" HorizontalAlignment="Right" Margin="0,8,50,0" RenderTransformOrigin="0.294,0.275" Width="192" Opacity="0" Height="97" VerticalAlignment="Top">
+            	<i:Interaction.Triggers>
+            		<i:EventTrigger EventName="Click">
+            			<eim:PlaySoundAction Volume="1" Source="/cymbal5.aif"/>
+            		</i:EventTrigger>
+            	</i:Interaction.Triggers>
+            </Button>
+            <Button x:Name="b8" Content="Button" Margin="332,0,347,28" RenderTransformOrigin="0.294,0.275" Opacity="0" Height="75" VerticalAlignment="Bottom" ClickMode="Press">
+            	<i:Interaction.Triggers>
+            		<i:EventTrigger EventName="Click">
+            			<eim:PlaySoundAction Volume="1" Source="/kick2.aif"/>
+            		</i:EventTrigger>
+            	</i:Interaction.Triggers>
+            </Button>
+        </Grid>
+    </Grid>
+ 
+    <!--Sample code showing usage of ApplicationBar-->
+    <!--<phone:PhoneApplicationPage.ApplicationBar>
+        <shell:ApplicationBar IsVisible="True" IsMenuEnabled="True">
+            <shell:ApplicationBarIconButton IconUri="/Images/appbar_button1.png" Text="Button 1"/>
+            <shell:ApplicationBarIconButton IconUri="/Images/appbar_button2.png" Text="Button 2"/>
+            <shell:ApplicationBar.MenuItems>
+                <shell:ApplicationBarMenuItem Text="MenuItem 1"/>
+                <shell:ApplicationBarMenuItem Text="MenuItem 2"/>
+            </shell:ApplicationBar.MenuItems>
+        </shell:ApplicationBar>
+    </phone:PhoneApplicationPage.ApplicationBar>-->
+
+</phone:PhoneApplicationPage>

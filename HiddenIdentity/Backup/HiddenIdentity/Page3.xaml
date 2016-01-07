@@ -1,0 +1,60 @@
+﻿<phone:PhoneApplicationPage 
+    x:Class="HiddenIdentity.Page3"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Landscape" Orientation="Landscape"
+    mc:Ignorable="d" d:DesignHeight="480" d:DesignWidth="728"
+    shell:SystemTray.IsVisible="True">
+
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!--TitlePanel contains the name of the application and page title-->
+        <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="12,17,0,28"/>
+
+        <!--ContentPanel - place additional content here-->
+        <Grid x:Name="ContentPanel" Margin="12,8,12,0" Grid.RowSpan="2">
+            <Image Height="401" HorizontalAlignment="Left" Margin="6,9,0,0" Name="image1" Stretch="Fill" VerticalAlignment="Top" Width="608" Source="/HiddenIdentity;component/1.jpg" />
+            <Image Height="50" HorizontalAlignment="Left" Margin="6,416,0,0" Name="stick" Stretch="Fill" VerticalAlignment="Top" Width="100" Source="/HiddenIdentity;component/l2.jpg" />
+            <Image Height="50" HorizontalAlignment="Left" Margin="112,416,0,0" Name="girl" Source="/HiddenIdentity;component/l21.jpg" Stretch="Fill" VerticalAlignment="Top" Width="100" />
+            <Image Height="50" HorizontalAlignment="Left" Margin="230,416,0,0" Name="arrow" Source="/HiddenIdentity;component/l22.jpg" Stretch="Fill" VerticalAlignment="Top" Width="100" />
+            <Image Height="50" HorizontalAlignment="Left" Margin="336,416,0,0" Name="goggle" Source="/HiddenIdentity;component/l23.jpg" Stretch="Fill" VerticalAlignment="Top" Width="100" />
+            <Image Height="50" HorizontalAlignment="Right" Margin="0,416,56,0" Name="conch" Source="/HiddenIdentity;component/l24.jpg" Stretch="Fill" VerticalAlignment="Top" Width="100" />
+            <Image Height="50" HorizontalAlignment="Right" Margin="0,416,162,0" Name="mermaid" Source="/HiddenIdentity;component/l25.jpg" Stretch="Fill" VerticalAlignment="Top" Width="100" />
+            <Button Content="Button" Height="404" HorizontalAlignment="Left" Margin="0,6,0,0" Name="button1" VerticalAlignment="Top" Width="614" Opacity="0" Click="button1_Click_1" />
+            <Button Content="Button" Height="72" HorizontalAlignment="Left" Margin="242,310,0,0" Name="button2" VerticalAlignment="Top" Width="36" Opacity="0" Click="button2_Click_1" />
+            <Button Content="Button" Height="85" HorizontalAlignment="Left" Margin="276,136,0,0" Name="button3" VerticalAlignment="Top" Width="27" Click="button3_Click_1" Opacity="0" />
+            <Button Content="Button" Height="42" HorizontalAlignment="Left" Margin="403,368,0,0" Name="button4" VerticalAlignment="Top" Width="67" Opacity="0" Click="button4_Click_1" />
+            <Button Content="Button" Height="55" HorizontalAlignment="Left" Margin="98,256,0,0" Name="button5" VerticalAlignment="Top" Width="43" Opacity="0" Click="button5_Click_1" />
+            <Button Content="Button" Height="72" HorizontalAlignment="Left" Margin="21,9,0,0" Name="button6" VerticalAlignment="Top" Width="50" Opacity="0" Click="button6_Click_1" />
+            <Button Content="Button" Height="42" HorizontalAlignment="Left" Margin="98,97,0,0" Name="button7" VerticalAlignment="Top" Width="43" Opacity="0" Click="button7_Click" />
+            <TextBlock Height="108" HorizontalAlignment="Left" Margin="620,31,0,0" Name="myblock" Text="" VerticalAlignment="Top" Width="78" />
+            <Image Height="140" HorizontalAlignment="Left" Margin="620,270,0,0" Name="image2" Source="/HiddenIdentity;component/submit.png" Stretch="Fill" VerticalAlignment="Top" Width="69" />
+            <Button Content="Button" Height="140" HorizontalAlignment="Left" Margin="618,270,0,0" Name="button8" Opacity="0" VerticalAlignment="Top" Width="71" Click="button8_Click" />
+        </Grid>
+    </Grid>
+ 
+    <!--Sample code showing usage of ApplicationBar-->
+    <!--<phone:PhoneApplicationPage.ApplicationBar>
+        <shell:ApplicationBar IsVisible="True" IsMenuEnabled="True">
+            <shell:ApplicationBarIconButton IconUri="/Images/appbar_button1.png" Text="Button 1"/>
+            <shell:ApplicationBarIconButton IconUri="/Images/appbar_button2.png" Text="Button 2"/>
+            <shell:ApplicationBar.MenuItems>
+                <shell:ApplicationBarMenuItem Text="MenuItem 1"/>
+                <shell:ApplicationBarMenuItem Text="MenuItem 2"/>
+            </shell:ApplicationBar.MenuItems>
+        </shell:ApplicationBar>
+    </phone:PhoneApplicationPage.ApplicationBar>-->
+
+</phone:PhoneApplicationPage>
